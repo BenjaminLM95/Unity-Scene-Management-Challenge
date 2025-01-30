@@ -68,9 +68,8 @@ public class LevelManagement : MonoBehaviour
     {
         SceneManager.sceneLoaded -= onSceneLoaded;
     }
-        
 
-    private void OnTriggerEnter(Collider collision)
+    private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Collision");
 
@@ -93,5 +92,6 @@ public class LevelManagement : MonoBehaviour
             LoadMap1_2();
         }
     }
+    
 
 }
