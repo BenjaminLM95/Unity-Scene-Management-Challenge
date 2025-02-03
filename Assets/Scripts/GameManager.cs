@@ -1,12 +1,14 @@
 using UnityEngine;
 
-public class Singleton : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    static Singleton Instance;
-
+    public static GameManager Instance { get; private set; }
+    public LevelManagement _levelManagement; 
+    
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        //Debug.Log($"Game Manager hitting awake. Current instance is {Instance}");
         if (Instance != null)
         {
             GameObject.Destroy(gameObject);
@@ -18,4 +20,6 @@ public class Singleton : MonoBehaviour
         }
     }
 
+    
+    
 }
